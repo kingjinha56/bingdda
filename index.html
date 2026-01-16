@@ -26,125 +26,214 @@
     }
     .layout { display: flex; min-height: 100vh; }
     .sidebar {
-      width: 220px; background-color: var(--sidebar-color);
-      padding: 20px; box-sizing: border-box;
+      width: 220px;
+      background-color: var(--sidebar-color);
+      padding: 20px;
+      box-sizing: border-box;
       border-right: 1px solid var(--border-color);
-      position: sticky; top: 0; height: 100vh;
+      position: sticky;
+      top: 0;
+      height: 100vh;
     }
+    .sidebar h3 { margin-top: 0; }
     .sidebar ul { list-style: none; padding: 0; }
     .sidebar li { margin: 10px 0; }
-    .sidebar a { color: inherit; text-decoration: none; }
+    .sidebar a {
+      color: inherit;
+      text-decoration: none;
+    }
     .sidebar a:hover { text-decoration: underline; }
+
     .main { flex: 1; padding: 20px; box-sizing: border-box; }
     .container {
-      max-width: 800px; margin: auto;
+      max-width: 800px;
+      margin: auto;
       background-color: var(--card-color);
-      padding: 20px; border-radius: 8px;
+      padding: 20px;
+      border-radius: 8px;
     }
+
     .profile { text-align: center; }
     .profile h1 { font-size: 36px; margin-bottom: 10px; }
     .profile img {
-      width: 200px; height: 200px; background: #777;
-      border-radius: 8px; object-fit: cover; margin-bottom: 10px;
+      width: 200px;
+      height: 200px;
+      background: #777;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-bottom: 10px;
     }
+
     h2 {
       border-bottom: 2px solid var(--border-color);
-      padding-bottom: 5px; margin-top: 40px;
+      padding-bottom: 5px;
+      margin-top: 40px;
     }
+
     blockquote {
       border-left: 4px solid var(--border-color);
-      padding-left: 15px; margin: 15px 0;
-      font-style: italic; opacity: 0.9;
+      padding-left: 15px;
+      margin: 15px 0;
+      font-style: italic;
+      opacity: 0.9;
     }
-    .highlight-red { color: red; font-weight: bold; }
+
+    .highlight-red {
+      color: red;
+      font-weight: bold;
+    }
+
+    details {
+      margin-top: 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 10px;
+      background-color: rgba(0,0,0,0.03);
+    }
+
+    details summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
     .dark-toggle {
-      margin-top: 20px; padding: 8px 12px; cursor: pointer;
-      border: none; border-radius: 5px;
-      background-color: #444; color: #fff; width: 100%;
+      margin-top: 20px;
+      padding: 8px 12px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #444;
+      color: #fff;
+      width: 100%;
     }
   </style>
 </head>
 <body>
-  <div class="layout">
-    <aside class="sidebar">
-      <h3>목차</h3>
-      <ul>
-        <li><a href="#profile">프로필</a></li>
-        <li><a href="#overview">개요</a></li>
-        <li><a href="#sexuality">그의 성적 취향에 관하여</a></li>
-        <li><a href="#mother">그의 엄마에 관하여</a></li>
-        <li><a href="#power">그의 빙따력에 관하여</a></li>
-        <li><a href="#trivia">여담</a></li>
-      </ul>
-      <button class="dark-toggle" onclick="toggleDarkMode()">🌙 다크모드 전환</button>
-    </aside>
+<div class="layout">
 
-    <main class="main">
-      <div class="container">
-        <div class="profile" id="profile">
-          <h1>릴케(임종윤)</h1>
-          <img src="#" alt="임시용 사진">
-          <p>엄마가 549억명이 있다</p>
-        </div>
+  <!-- 사이드바 -->
+  <aside class="sidebar">
+    <h3>목차</h3>
+    <ul>
+      <li><a href="#profile">프로필</a></li>
+      <li><a href="#overview">개요</a></li>
+      <li><a href="#sexuality">그의 성적 취향에 관하여</a></li>
+      <li><a href="#mother">그의 엄마에 관하여</a></li>
+      <li><a href="#power">그의 빙따력에 관하여</a></li>
+      <li><a href="#trivia">여담</a></li>
+    </ul>
+    <button class="dark-toggle" onclick="toggleDarkMode()">🌙 다크모드 전환</button>
+  </aside>
 
-        <h2 id="overview">개요</h2>
-        <p>독일, 러시아, 베트남, 한국 4중국적의 빙따의 제왕</p>
+  <!-- 메인 -->
+  <main class="main">
+    <div class="container">
 
-        <h2 id="sexuality">그의 성적 취향에 관하여</h2>
-        <p>그는 명백한 <span class="highlight-red">마조히스트</span>다.</p>
-        <p>
-          또는 그는 명백한 게이인 길해민과 엮이며 게이 의심을 받고 있다.
-          해당 게이 논란은 커뮤니티에서는 거의 정설로 받아들여지고 있다.
-        </p>
-
-        <h2 id="mother">그의 엄마에 관하여</h2>
-        <p>
-          색약의 눈을 가지고 있는데 109,409번째와 108,039,039번째 엄마의 눈이
-          각각 25%, 75%의 비율로 섞여 나타난 결과라고 전해진다.
-        </p>
-        <p>
-          약 549억 명의 엄마를 가지고 있으며, 그중 본인의 말에 따르면
-          15.8%가 중국인이라고 한다. 그는 조직별로 따로 태어나는 방식을 거쳤으며,
-          그로 인해 이처럼 방대한 수의 엄마를 가지게 되었다고 알려져 있다.
-        </p>
-
-        <h2 id="power">그의 빙따력에 관하여</h2>
-        <blockquote>
-          “그의 빙따력은 상상을 초월해, 나도 그에게 졌다.”<br>— 트립
-        </blockquote>
-        <p>
-          그의 빙따력은 세계 최강이라는 평가를 받는다. 다만 그 힘의 구성은
-          99.9%의 진심과 0.1%의 장난으로 이루어져 있다는 점에서 독특하다.
-        </p>
-        <p>
-          반면, ‘동동’은 100% 진심의 빙따력을 소화하고 있으며,
-          이로 인해 최근에는 그에게 밀리고 있다는 평가가 지배적이다.
-        </p>
-
-        <h2 id="trivia">여담</h2>
-        <p>
-          러시아 아이들과 술래잡기를 한 경험이 있는데, 당시 러시아 아이들이
-          나무 위로 올라가는 바람에 크게 당황한 적이 있다고 전해진다.
-        </p>
-        <p>
-          모바일 게임 <strong>블루 아카이브</strong>의 등장 캐릭터
-          <strong>「호시노」</strong>를 굉장히 좋아하는 것으로 알려져 있다.
-        </p>
-        <p>
-          마인크래프트 파쿠르 종목에서는 상당한 실력을 보이지만,
-          야생과 같은 다른 종목에서는 개잣같이 못한다는 평가를 받는다.
-          그러나 본인이 직접 야생을 하는 것을 다른 사람이 본다면 놀라 자빠진다고 한다.
-          놀라 자빠지긴 함.
-        </p>
-        <p>종윤석종윤석</p>
+      <!-- 프로필 -->
+      <div class="profile" id="profile">
+        <h1>릴케(임종윤)</h1>
+        <img src="#" alt="임시용 사진">
+        <p>엄마가 549억명이 있다</p>
       </div>
-    </main>
-  </div>
 
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-    }
-  </script>
+      <!-- 개요 -->
+      <h2 id="overview">개요</h2>
+      <p>독일, 러시아, 베트남, 한국 4중국적의 빙따의 제왕</p>
+
+      <!-- 성적 취향 -->
+      <h2 id="sexuality">그의 성적 취향에 관하여</h2>
+      <p>그는 명백한 <span class="highlight-red">마조히스트</span>다.</p>
+      <p>
+        또는 그는 명백한 게이인 길해민과 엮여 게이 의심을 받고 있다.
+        게이 논란은 커뮤니티에서는 거의 정설로 받아들여지고 있다.
+      </p>
+      <p>
+        아래 본문은 커뮤니티에 화제가 되고 있는 해민과 종윤의 러브스토리 2차 창작이다.
+      </p>
+
+      <details>
+        <summary>해민과 릴케의 러브스토리 (열기)</summary>
+
+        <p><strong>고독의 성벽에 드리운 빛</strong></p>
+        <p>
+          릴케의 세계는 늘 정교하게 다듬어진 문장들로 쌓아 올린 견고한 성벽과 같았다.
+          타인의 발길이 닿지 않는 서늘한 도서관 귀퉁이, 그는 그곳에서 자신만의 고독을
+          탐닉하며 글자 속에 침잠해 있었다. 그런 릴케의 정막을 깨뜨린 것은 해민이라는
+          이름의 불청객이었다. 해민이 실수로 쏟아버린 잉크병이 릴케의 하얀 원고지 위로
+          검은 꽃을 피워냈을 때, 릴케는 난생처음 자신의 질서가 무너지는 당혹감을 맛보았다.
+          그러나 당황해하며 서둘러 손수건을 내미는 해민의 손끝에서 배어 나온 온기는
+          릴케가 평생 시 속에서 찾아 헤매던, 가공되지 않은 생의 열기 그 자체였다.
+        </p>
+
+        <p><strong>낯선 온기의 침투</strong></p>
+        <p>
+          해민은 릴케의 거절에 익숙해지지 않는 사람이었다. 그는 릴케가 두른 차가운
+          침묵의 외투를 개의치 않는다는 듯 매일 아침 허브 화분을 놓고 소음을 전해주었다.
+          릴케는 어느새 해민이 없는 시간마다 문장 속에서 길을 잃었다.
+        </p>
+
+        <p><strong>자백, 문장이 사랑이 되는 순간</strong></p>
+        <p>
+          “나의 모든 시어는 너를 수식하기 위해 존재해 왔던 것 같아.”
+          두 사람은 서로의 맥박이 맞닿은 순간, 귀속을 인정했다.
+        </p>
+
+        <p><strong>마침표 없는 미완의 연가</strong></p>
+        <p>
+          그날 이후 두 남자의 삶은 하나의 서사가 되었고,
+          마침표 없는 사랑의 연가는 계속 쓰이고 있다.
+        </p>
+      </details>
+
+      <!-- 엄마 -->
+      <h2 id="mother">그의 엄마에 관하여</h2>
+      <p>
+        색약의 눈은 109,409번째와 108,039,039번째 엄마의 눈이
+        25%, 75% 비율로 섞인 결과라고 전해진다.
+      </p>
+      <p>
+        약 549억 명의 엄마를 가지고 있으며, 이 중 15.8%가 중국인이라고 한다.
+        그는 조직별로 따로 태어나는 방식을 거쳤다.
+      </p>
+
+      <!-- 빙따력 -->
+      <h2 id="power">그의 빙따력에 관하여</h2>
+      <blockquote>
+        “그의 빙따력은 상상을 초월해, 나도 그에게 졌다.” — 트립
+      </blockquote>
+      <p>
+        그의 빙따력은 세계 최강이라 평가된다.
+        99.9% 진심과 0.1% 장난으로 구성되어 있다.
+      </p>
+      <p>
+        반면 ‘동동’은 100% 진심의 빙따력을 소화하며,
+        최근에는 그에게 밀린다는 평가가 지배적이다.
+      </p>
+
+      <!-- 여담 -->
+      <h2 id="trivia">여담</h2>
+      <p>
+        러시아 아이들과 술래잡기를 하다 나무 위로 올라가는 바람에
+        당황한 경험이 있다고 전해진다.
+      </p>
+      <p>
+        블루 아카이브의 「호시노」를 굉장히 좋아하는 것으로 알려져 있다.
+      </p>
+      <p>
+        마인크래프트 파쿠르에는 강하지만 야생은 개잣같이 못한다는 평가를 받는다.
+        그러나 실제 플레이를 보면 놀라 자빠진다고 한다. 놀라 자빠지긴 함.
+      </p>
+      <p>종윤석종윤석</p>
+
+    </div>
+  </main>
+</div>
+
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark');
+  }
+</script>
 </body>
 </html>
+
