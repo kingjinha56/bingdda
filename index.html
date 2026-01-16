@@ -11,7 +11,6 @@
       --border-color: #dddddd;
       --sidebar-color: #eeeeee;
     }
-
     body.dark {
       --bg-color: #121212;
       --card-color: #1e1e1e;
@@ -19,126 +18,67 @@
       --border-color: #333333;
       --sidebar-color: #1a1a1a;
     }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
     }
-
-    .layout {
-      display: flex;
-      min-height: 100vh;
-    }
-
+    .layout { display: flex; min-height: 100vh; }
     .sidebar {
-      width: 220px;
-      background-color: var(--sidebar-color);
-      padding: 20px;
-      box-sizing: border-box;
+      width: 220px; background-color: var(--sidebar-color);
+      padding: 20px; box-sizing: border-box;
       border-right: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      height: 100vh;
+      position: sticky; top: 0; height: 100vh;
     }
-
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .sidebar li {
-      margin: 10px 0;
-    }
-
-    .sidebar a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .sidebar a:hover {
-      text-decoration: underline;
-    }
-
-    .main {
-      flex: 1;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
+    .sidebar ul { list-style: none; padding: 0; }
+    .sidebar li { margin: 10px 0; }
+    .sidebar a { color: inherit; text-decoration: none; }
+    .sidebar a:hover { text-decoration: underline; }
+    .main { flex: 1; padding: 20px; box-sizing: border-box; }
     .container {
-      max-width: 800px;
-      margin: auto;
+      max-width: 800px; margin: auto;
       background-color: var(--card-color);
-      padding: 20px;
-      border-radius: 8px;
+      padding: 20px; border-radius: 8px;
     }
-
-    .profile {
-      text-align: center;
-    }
-
-    .profile h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
+    .profile { text-align: center; }
+    .profile h1 { font-size: 36px; margin-bottom: 10px; }
     .profile img {
-      width: 200px;
-      height: 200px;
-      background: #777;
-      border-radius: 8px;
-      margin-bottom: 10px;
+      width: 200px; height: 200px; background: #777;
+      border-radius: 8px; object-fit: cover; margin-bottom: 10px;
     }
-
     h2 {
       border-bottom: 2px solid var(--border-color);
-      padding-bottom: 5px;
-      margin-top: 40px;
+      padding-bottom: 5px; margin-top: 40px;
     }
-
     blockquote {
       border-left: 4px solid var(--border-color);
-      padding-left: 15px;
-      margin: 15px 0;
-      font-style: italic;
+      padding-left: 15px; margin: 15px 0;
+      font-style: italic; opacity: 0.9;
     }
-
-    .red-bold {
-      color: red;
-      font-weight: bold;
-    }
-
+    .highlight-red { color: red; font-weight: bold; }
     .dark-toggle {
-      margin-top: 20px;
-      padding: 8px;
-      width: 100%;
-      background: #444;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+      margin-top: 20px; padding: 8px 12px; cursor: pointer;
+      border: none; border-radius: 5px;
+      background-color: #444; color: #fff; width: 100%;
     }
   </style>
 </head>
 <body>
   <div class="layout">
-    <!-- 사이드바 -->
     <aside class="sidebar">
       <h3>목차</h3>
       <ul>
         <li><a href="#profile">프로필</a></li>
         <li><a href="#overview">개요</a></li>
-        <li><a href="#mother">그의 엄마에 관하여</a></li>
         <li><a href="#sexuality">그의 성적 취향에 관하여</a></li>
+        <li><a href="#mother">그의 엄마에 관하여</a></li>
         <li><a href="#power">그의 빙따력에 관하여</a></li>
         <li><a href="#trivia">여담</a></li>
       </ul>
       <button class="dark-toggle" onclick="toggleDarkMode()">🌙 다크모드 전환</button>
     </aside>
 
-    <!-- 메인 -->
     <main class="main">
       <div class="container">
         <div class="profile" id="profile">
@@ -150,50 +90,51 @@
         <h2 id="overview">개요</h2>
         <p>독일, 러시아, 베트남, 한국 4중국적의 빙따의 제왕</p>
 
+        <h2 id="sexuality">그의 성적 취향에 관하여</h2>
+        <p>그는 명백한 <span class="highlight-red">마조히스트</span>다.</p>
+        <p>
+          또는 그는 명백한 게이인 길해민과 엮이며 게이 의심을 받고 있다.
+          해당 게이 논란은 커뮤니티에서는 거의 정설로 받아들여지고 있다.
+        </p>
+
         <h2 id="mother">그의 엄마에 관하여</h2>
         <p>
           색약의 눈을 가지고 있는데 109,409번째와 108,039,039번째 엄마의 눈이
           각각 25%, 75%의 비율로 섞여 나타난 결과라고 전해진다.
         </p>
         <p>
-          약 549억 명의 엄마를 가지고 있으며, 그중 15.8%가 중국인이라고 본인이 밝혔다.
-          조직별로 따로 태어난 결과 이러한 구조가 형성되었다고 한다.
-        </p>
-
-        <h2 id="sexuality">그의 성적 취향에 관하여</h2>
-        <p>
-          그는 명백한 <span class="red-bold">마조히스트</span>다.
-        </p>
-        <p>
-          또한 명백한 게이로 알려진 길해민과 자주 엮이면서 게이 의혹을 받고 있다.
-          해당 논란은 커뮤니티 내에서는 거의 정설로 받아들여지고 있는 분위기다.
+          약 549억 명의 엄마를 가지고 있으며, 그중 본인의 말에 따르면
+          15.8%가 중국인이라고 한다. 그는 조직별로 따로 태어나는 방식을 거쳤으며,
+          그로 인해 이처럼 방대한 수의 엄마를 가지게 되었다고 알려져 있다.
         </p>
 
         <h2 id="power">그의 빙따력에 관하여</h2>
         <blockquote>
-          “그의 빙따력은 상상을 초월해, 나도 그에게 졌다.”
-          <br>— 트립
+          “그의 빙따력은 상상을 초월해, 나도 그에게 졌다.”<br>— 트립
         </blockquote>
         <p>
-          그의 빙따력은 세계 최강이라는 평가를 받는다. 다만 99.9%의 진심과
-          0.1%의 장난으로 구성되어 있다는 점이 특징이다.
+          그의 빙따력은 세계 최강이라는 평가를 받는다. 다만 그 힘의 구성은
+          99.9%의 진심과 0.1%의 장난으로 이루어져 있다는 점에서 독특하다.
         </p>
         <p>
-          반면 ‘동동’은 100% 진심의 빙따력을 운용하며, 최근에는 그에게 밀린다는
-          평가가 지배적이다.
+          반면, ‘동동’은 100% 진심의 빙따력을 소화하고 있으며,
+          이로 인해 최근에는 그에게 밀리고 있다는 평가가 지배적이다.
         </p>
 
         <h2 id="trivia">여담</h2>
         <p>
-          러시아 아이들과 술래잡기를 하다 아이들이 나무 위로 올라가는 바람에
-          당황한 경험이 있다고 전해진다.
+          러시아 아이들과 술래잡기를 한 경험이 있는데, 당시 러시아 아이들이
+          나무 위로 올라가는 바람에 크게 당황한 적이 있다고 전해진다.
         </p>
         <p>
-          블루 아카이브의 캐릭터 「호시노」를 매우 좋아하는 것으로 알려져 있다.
+          모바일 게임 <strong>블루 아카이브</strong>의 등장 캐릭터
+          <strong>「호시노」</strong>를 굉장히 좋아하는 것으로 알려져 있다.
         </p>
         <p>
-          마인크래프트 파쿠르에는 강하지만 야생 등 다른 종목은 개잣같이 못한다는
-          평가를 받는다. 에레레.
+          마인크래프트 파쿠르 종목에서는 상당한 실력을 보이지만,
+          야생과 같은 다른 종목에서는 개잣같이 못한다는 평가를 받는다.
+          그러나 본인이 직접 야생을 하는 것을 다른 사람이 본다면 놀라 자빠진다고 한다.
+          놀라 자빠지긴 함.
         </p>
         <p>종윤석종윤석</p>
       </div>
