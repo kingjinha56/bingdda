@@ -38,6 +38,9 @@
       padding: 20px;
       box-sizing: border-box;
       border-right: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      height: 100vh;
     }
 
     .sidebar h3 {
@@ -51,6 +54,15 @@
 
     .sidebar li {
       margin: 10px 0;
+    }
+
+    .sidebar a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
     }
 
     .main {
@@ -88,7 +100,15 @@
     h2 {
       border-bottom: 2px solid var(--border-color);
       padding-bottom: 5px;
-      margin-top: 30px;
+      margin-top: 40px;
+    }
+
+    blockquote {
+      border-left: 4px solid var(--border-color);
+      padding-left: 15px;
+      margin: 15px 0;
+      font-style: italic;
+      opacity: 0.9;
     }
 
     .dark-toggle {
@@ -109,9 +129,10 @@
     <aside class="sidebar">
       <h3>목차</h3>
       <ul>
-        <li>프로필</li>
-        <li>개요</li>
-        <li>그의 이름에 관하여</li>
+        <li><a href="#profile">프로필</a></li>
+        <li><a href="#overview">개요</a></li>
+        <li><a href="#mother">그의 엄마에 관하여</a></li>
+        <li><a href="#power">그의 빙따력에 관하여</a></li>
       </ul>
       <button class="dark-toggle" onclick="toggleDarkMode()">
         🌙 다크모드 전환
@@ -121,23 +142,42 @@
     <!-- 메인 -->
     <main class="main">
       <div class="container">
-        <div class="profile">
+        <!-- 프로필 -->
+        <div class="profile" id="profile">
           <h1>릴케(임종윤)</h1>
           <img src="#" alt="임시용 사진">
           <p>엄마가 549억명이 있다</p>
         </div>
 
-        <h2>개요</h2>
+        <!-- 개요 -->
+        <h2 id="overview">개요</h2>
         <p>독일, 러시아, 베트남, 한국 4중국적의 빙따의 제왕</p>
 
-        <h2>그의 이름에 관하여</h2>
+        <!-- 엄마 -->
+        <h2 id="mother">그의 엄마에 관하여</h2>
         <p>
-          색약의 눈을 가지고 있는데 109,409번째랑 108,039,039번째 엄마의 눈이
-          25%, 75%씩 섞여서 나온 거라 한다.
+          색약의 눈을 가지고 있는데 109,409번째와 108,039,039번째 엄마의 눈이
+          각각 25%, 75%의 비율로 섞여 나타난 결과라고 전해진다.
         </p>
         <p>
-          약 549억명의 엄마를 가지고 있으며, 그 중 본인이 말하길 15.8%가 중국인이라 한다.
-          그는 조직별로 따로 태어나 이렇게 수많은 엄마를 가지게 되었다.
+          약 549억 명의 엄마를 가지고 있으며, 그중 본인의 말에 따르면
+          15.8%가 중국인이라고 한다. 그는 조직별로 따로 태어나는 방식을 거쳤으며,
+          그로 인해 이처럼 방대한 수의 엄마를 가지게 되었다고 알려져 있다.
+        </p>
+
+        <!-- 빙따력 -->
+        <h2 id="power">그의 빙따력에 관하여</h2>
+        <blockquote>
+          “그의 빙따력은 상상을 초월해, 나도 그에게 졌다.”
+          <br>— 트립
+        </blockquote>
+        <p>
+          그의 빙따력은 세계 최강이라는 평가를 받는다. 다만 그 힘의 구성은
+          99.9%의 진심과 0.1%의 장난으로 이루어져 있다는 점에서 독특하다.
+        </p>
+        <p>
+          반면, ‘동동’은 100% 진심의 빙따력을 지속적으로 소화하고 있으며,
+          이로 인해 최근에는 그에게 밀리고 있다는 평가가 지배적이다.
         </p>
       </div>
     </main>
@@ -150,4 +190,3 @@
   </script>
 </body>
 </html>
-
